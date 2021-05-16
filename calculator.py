@@ -6,7 +6,8 @@
 #
 
 
-valid_operators = ("+", "-", "*", "/")          # tuple to hold the valid arithmetic operators
+# tuple to hold the valid arithmetic operators
+valid_operators = ("+", "-", "*", "/")
 
 
 # function to print all the valid arithmetic operators
@@ -14,7 +15,8 @@ valid_operators = ("+", "-", "*", "/")          # tuple to hold the valid arithm
 # returns - None
 def print_valid_operators():
     for op in valid_operators:                  # loop through the tuple which holds the valid arithmetic operators
-        print(op, end = '')                       # print the valid operators without the default newline
+        # print the valid operators without the default newline
+        print(op, end='')
     print()                                     # empty print to print a newline
 
 
@@ -56,7 +58,6 @@ def operation(a, o, b):
 
 
 # function to evaluate an arithmetic expression which is formed by user inputs
-# follow DMAS rule during evaluation
 # arguments - integer operand 1, string containing operator 1, integer operand 2, string containing operator 2, integer operand 3
 # returns - evaluated result of the arithmetic expression in float
 def evaluate_expression(a, op1, b, op2, c):
@@ -72,35 +73,41 @@ def evaluate_expression(a, op1, b, op2, c):
 # print the welcome message
 print("\n\nWelcome to 3-operand-and-2-operator Calculator\n\n")
 
-x = int(input("Please enter first integer operand: "))          # ask the user for input of first integer, and convert the entered string to int
+# ask the user for input of first integer, and convert the entered string to int
+x = int(input("Please enter first integer operand: "))
+
 
 # loop infinitely until user enters the correct arithmetic operator
 while True:
     o1 = input("Please enter the first operator: ")
 
-    # check if the operand entered by user in valid
+    # check if the operand entered by user in valid, if not alert the user
     if check_operator_validity(o1):
         break
     else:
-        print("[FAIL] Invalid operator entered, only supported operators are ", end = '')
-        print_valid_operators()                                 # print all the valid arithmetic operators to alert the user in case of bad input
+        print("[FAIL] Invalid operator entered, only supported operators are ", end='')
+        print_valid_operators()
 
-y = int(input("Please enter second integer operand: "))         # ask the user for input of second integer, and convert the entered string to int
+
+# ask the user for input of second integer, and convert the entered string to int
+y = int(input("Please enter second integer operand: "))
+
 
 # loop infinitely until user enters the correct arithmetic operator
 while True:
     o2 = input("Please enter the second operator: ")
 
-    # check if the operand entered by user in valid
+    # check if the operand entered by user in valid, , if not alert the user
     if check_operator_validity(o2):
         break
     else:
-        print("[FAIL] Invalid operator entered, only supported operators are ", end = '')
-        print_valid_operators()                                 # print all the valid arithmetic operators to alert the user in case of bad input
+        print("[FAIL] Invalid operator entered, only supported operators are ", end='')
+        print_valid_operators()
 
-z = int(input("Please enter third integer operand: "))          # ask the user for input of third integer, and convert the entered string to int
+
+# ask the user for input of third integer, and convert the entered string to int
+z = int(input("Please enter third integer operand: "))
 
 
 # print the arithmetic expression and the result
 print("Result for the expression", x, o1, y, o2, z, ":", evaluate_expression(x, o1, y, o2, z))
-
