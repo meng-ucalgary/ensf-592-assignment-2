@@ -14,7 +14,7 @@ valid_operators = ("+", "-", "*", "/")          # tuple to hold the valid arithm
 # returns - None
 def print_valid_operators():
     for op in valid_operators:                  # loop through the tuple which holds the valid arithmetic operators
-        print(op, end='')                       # print the valid operators without the default newline
+        print(op, end = '')                       # print the valid operators without the default newline
     print()                                     # empty print to print a newline
 
 
@@ -82,7 +82,7 @@ while True:
     if check_operator_validity(o1):
         break
     else:
-        print("[FAIL] Invalid operator entered, only supported operators are ", end='')
+        print("[FAIL] Invalid operator entered, only supported operators are ", end = '')
         print_valid_operators()                                 # print all the valid arithmetic operators to alert the user in case of bad input
 
 y = int(input("Please enter second integer operand: "))         # ask the user for input of second integer, and convert the entered string to int
@@ -95,7 +95,7 @@ while True:
     if check_operator_validity(o2):
         break
     else:
-        print("[FAIL] Invalid operator entered, only supported operators are ", end='')
+        print("[FAIL] Invalid operator entered, only supported operators are ", end = '')
         print_valid_operators()                                 # print all the valid arithmetic operators to alert the user in case of bad input
 
 z = int(input("Please enter third integer operand: "))          # ask the user for input of third integer, and convert the entered string to int
